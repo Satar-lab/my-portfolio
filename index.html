@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Abdul Satar Sharifi — Graphic Designer</title>
+<meta name="description" content="Abdul Satar Sharifi — Graphic Designer specializing in brand identity, print and social media design. Available for freelance work."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+--bg:#0A0E14;--bg2:#10151D;--card:#151B24;
+--txt:#E8E6E1;--txt2:#8B93A1;
+--accent:#D4A24C;--accent-dim:#8A6B33;
+--border:#232A35;--success:#4ADE80;
+--r:4px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',sans-serif;font-size:17px;line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'JetBrains Mono',monospace;letter-spacing:-0.02em}
+.mono{font-family:'JetBrains Mono',monospace}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:0 auto;padding:0 24px}
+.eyebrow{font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--txt2)}
+.section{padding:96px 0;border-top:1px solid var(--border)}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,14,20,0.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);padding:16px 0}
+.nav-inner{display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:15px;color:var(--accent);text-decoration:none}
+.nav-links{display:flex;gap:28px}
+.nav-links a{font-size:13px;color:var(--txt2);text-decoration:none;letter-spacing:0.04em;font-family:'JetBrains Mono',monospace;transition:color .2s}
+.nav-links a:hover{color:var(--txt)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:8px;margin:0}
+.hamburger span{width:24px;height:2px;background:var(--txt);border-radius:2px;transition:all .3s ease}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px, 8px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px, -7px)}
+.nav-links-mobile{display:none;position:absolute;top:60px;left:0;right:0;flex-direction:column;gap:0;background:rgba(10,14,20,0.98);border-bottom:1px solid var(--border);padding:16px 0;z-index:99}
+.nav-links-mobile a{padding:12px 24px;font-size:14px;color:var(--txt2);border-bottom:1px solid var(--border);transition:background .2s}
+.nav-links-mobile a:last-child{border-bottom:none}
+.nav-links-mobile a:hover{color:var(--txt);background:rgba(212,162,76,0.08)}
+.nav-links-mobile.active{display:flex}
+#hero{min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+.hero-grid{display:grid;grid-template-columns:1fr auto;gap:64px;align-items:center}
+.terminal-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r);padding:28px 32px;font-family:'JetBrains Mono',monospace;font-size:14px;line-height:1.9;min-width:460px}
+.terminal-header{display:flex;align-items:center;gap:8px;margin-bottom:20px;padding-bottom:16px;border-bottom:1px solid var(--border)}
+.dot{width:10px;height:10px;border-radius:50%}
+.dot-r{background:#FF5F57}.dot-y{background:#FEBC2E}.dot-g{background:#28C840}
+.terminal-title{font-size:11px;color:var(--txt2);margin-left:4px}
+.cursor{display:inline-block;width:8px;height:14px;background:var(--accent);vertical-align:middle;animation:blink 1s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-sub{font-size:18px;line-height:1.65;color:var(--txt2);max-width:480px;margin-bottom:40px;margin-top:32px}
+.btn-group{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:13px 26px;font-family:'JetBrains Mono',monospace;font-size:14px;border-radius:var(--r);cursor:pointer;transition:all .2s;font-weight:500;border:none;text-decoration:none}
+.btn-primary{background:var(--accent);color:#0A0E14}
+.btn-primary:hover{background:#e0b05a;color:#0A0E14;text-decoration:none}
+.btn-outline{background:transparent;color:var(--txt);border:1px solid var(--border)}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+.profile-placeholder{width:220px;height:260px;border:1px solid var(--accent-dim);border-radius:var(--r);background:var(--card);display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.profile-placeholder img{width:100%;height:100%;object-fit:cover;border-radius:var(--r);}
+.profile-placeholder .initials{font-family:'JetBrains Mono',monospace;font-size:42px;font-weight:700;color:var(--accent-dim)}
+.project-img{display:block;width:100%;border-radius:var(--r);object-fit:cover;margin:20px 0 16px;border:1px solid var(--border);background:var(--card)}
+.about-grid{display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start}
+.about-text p{color:var(--txt2);margin-bottom:16px;font-size:17px}
+.stats-col{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--r)}
+.stat-item{padding:20px 24px;border-bottom:1px solid var(--border)}
+.stat-item:last-child{border-bottom:none}
+.stat-num{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;color:var(--accent)}
+.stat-label{font-size:13px;color:var(--txt2);margin-top:4px}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1px;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.skill-group{background:var(--card);padding:28px}
+.skill-group-title{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:16px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{font-size:13px;color:var(--txt2);font-family:'JetBrains Mono',monospace;padding:4px 10px;border:1px solid var(--border);border-radius:3px;background:var(--bg)}
+.node-row{display:grid;grid-template-columns:160px 1fr;gap:32px;align-items:start;padding:24px 0;border-bottom:1px solid var(--border);cursor:pointer;transition:background .2s}
+.node-row:last-child{border-bottom:none}
+.node-row:hover .node-dot{border-color:var(--accent);background:var(--accent)}
+.node-row:hover .node-title{color:var(--accent)}
+.node-left{display:flex;flex-direction:column;align-items:flex-end;padding-right:24px;position:relative}
+.node-left::after{content:'';position:absolute;right:-1px;top:0;bottom:0;width:1px;background:var(--border)}
+.node-dot{width:12px;height:12px;border:1px solid var(--border);border-radius:2px;background:var(--card);margin-bottom:8px;transition:all .2s}
+.node-year{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--txt2)}
+.node-role-badge{font-size:11px;font-family:'JetBrains Mono',monospace;color:var(--accent-dim);margin-top:4px}
+.node-content{padding-left:32px}
+.node-title{font-family:'JetBrains Mono',monospace;font-size:18px;font-weight:700;color:var(--txt);margin-bottom:6px;transition:color .2s}
+.node-desc{font-size:15px;color:var(--txt2);margin-bottom:12px;line-height:1.55}
+.node-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.node-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);display:inline-flex;align-items:center;gap:4px}
+.node-link:hover{text-decoration:underline}
+.status-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:2px}
+.status-live{color:var(--success);border:1px solid rgba(74,222,128,.25);background:rgba(74,222,128,.06)}
+.status-progress{color:var(--accent);border:1px solid rgba(212,162,76,.25);background:rgba(212,162,76,.06)}
+.contact-grid{display:grid;grid-template-columns:1fr 280px;gap:64px;align-items:start}
+.form-group{margin-bottom:20px}
+.form-label{display:block;font-family:'JetBrains Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:var(--txt2);margin-bottom:8px}
+.form-input{width:100%;background:var(--card);border:1px solid var(--border);border-radius:var(--r);color:var(--txt);font-family:'Inter',sans-serif;font-size:15px;padding:12px 16px;outline:none;transition:border-color .2s}
+.form-input:focus{border-color:var(--accent)}
+textarea.form-input{resize:vertical;min-height:120px}
+.form-submit{background:var(--accent);color:#0A0E14;border:none;padding:14px 28px;font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:700;border-radius:var(--r);cursor:pointer;width:100%;transition:background .2s}
+.form-submit:hover{background:#e0b05a}
+.contact-links{display:flex;flex-direction:column;gap:1px;border:1px solid var(--border);border-radius:var(--r)}
+.contact-link-item{display:flex;align-items:flex-start;gap:14px;padding:16px 20px;border-bottom:1px solid var(--border)}
+.contact-link-item:last-child{border-bottom:none}
+.contact-icon{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1px solid var(--border);flex-shrink:0;margin-top:6px;color:var(--txt2)}
+.contact-icon svg{width:16px;height:16px;fill:currentColor}
+.contact-icon img{width:100%;height:100%;object-fit:contain;border-radius:inherit}
+.contact-icon .mono-mark{font-family:'JetBrains Mono',monospace;font-weight:700;font-size:12px;line-height:1}
+.contact-icon.ci-email{color:#EA4335}
+.contact-icon.ci-phone{color:#4ADE80}
+.contact-icon.ci-whatsapp{color:#25D366}
+.contact-icon.ci-freelancer{background:#fff;border-color:#fff;padding:6px}
+.contact-icon.ci-freelancer svg{width:22px;height:22px}
+.contact-icon.ci-fiverr{background:#1DBF73;border-color:#1DBF73}
+.contact-icon.ci-fiverr .mono-mark{color:#fff;font-size:14px}
+.contact-icon.ci-linkedin{background:#0A66C2;border-color:#0A66C2;border-radius:8px}
+.contact-icon.ci-linkedin svg{fill:#fff}
+.contact-link-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--txt2);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px}
+.contact-link-val{font-size:14px;color:var(--txt)}
+.form-status{margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:13px;display:none;padding:10px 14px;border-radius:var(--r)}
+.status-ok{display:block;color:var(--success);background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2)}
+.status-err{display:block;color:#F87171;background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2)}
+footer{padding:32px 0;border-top:1px solid var(--border)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-name{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--txt2)}
+.sec-head{margin-bottom:56px}
+.sec-head .eyebrow{margin-bottom:12px;display:block}
+.sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--txt)}
+@media(max-width:768px){
+.hero-grid{grid-template-columns:1fr;gap:40px}
+.profile-placeholder{display:none}
+.about-grid,.contact-grid{grid-template-columns:1fr}
+.terminal-box{min-width:unset}
+.node-row{grid-template-columns:1fr;gap:8px}
+.node-left{text-align:left;padding-right:0;flex-direction:row;gap:12px;align-items:center}
+.node-left::after{display:none}
+.node-content{padding-left:0}
+.skills-grid{grid-template-columns:1fr 1fr}
+.hamburger{display:flex}
+.nav-links{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+.cursor{animation:none;opacity:1}
+*{animation-duration:0.01ms!important;transition-duration:0.01ms!important}
+}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-inner">
+<a href="#hero" class="nav-logo">AS_</a>
+<button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation">
+<span></span>
+<span></span>
+<span></span>
+</button>
+<div class="nav-links" id="nav-desktop">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+<div class="nav-links-mobile" id="nav-mobile">
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
+
+<section id="hero" style="min-height:100vh;display:flex;align-items:center;padding:120px 0 80px">
+<div class="container">
+<div class="hero-grid">
+<div>
+<div class="terminal-box" aria-label="Terminal introducing Abdul Satar Sharifi">
+<div class="terminal-header">
+<div class="dot dot-r"></div>
+<div class="dot dot-y"></div>
+<div class="dot dot-g"></div>
+<span class="terminal-title">bash — abdulsatar@portfolio</span>
+</div>
+<div id="terminal-body"></div>
+</div>
+<p class="hero-sub">I design logos, brand identities, posters, and social media visuals — turning a business's idea into a look people remember.</p>
+<div class="btn-group">
+<a href="#projects" class="btn btn-primary">See what I've built ↓</a>
+<a href="#contact" class="btn btn-outline">Get in touch</a>
+</div>
+</div>
+<div>
+<div class="profile-placeholder">
+<img src="images/profile.png" alt="Abdul Satar Sharifi" />
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="about" class="section">
+<div class="container">
+<div class="sec-head"><span class="eyebrow">About</span><h2>Who I am</h2></div>
+<div class="about-grid">
+<div class="about-text">
+<p>I'm a graphic designer who enjoys turning an idea into a clear, memorable visual — a poster, a social media ad, a flyer, or a full brand identity.</p>
+<p>My work moves across product ads, social media graphics, YouTube banners and thumbnails, and course or business promo flyers — always starting from what the message needs to say, not just what looks trendy.</p>
+<p>I'm available for freelance work: poster and ad design, social media content, YouTube graphics, and brand identity for small businesses and creators.</p>
+</div>
+<div class="stats-col">
+<div class="stat-item"><div class="stat-num">6+</div><div class="stat-label">Projects designed</div></div>
+<div class="stat-item"><div class="stat-num">Adobe<br/>Photoshop</div><div class="stat-label">Main tools</div></div>
+<div class="stat-item"><div class="stat-num" style="color:var(--success)">Open</div><div class="stat-label">Available for freelance</div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="skills" class="section">
+<div class="container">
+<div class="sec-head"><span class="eyebrow">Skills</span><h2>What I work with</h2></div>
+<div class="skills-grid">
+<div class="skill-group"><div class="skill-group-title">Design Software</div><div class="skill-tags"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">InDesign</span><span class="tag">Premiere Pro</span><span class="tag">Canva</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Brand & Identity</div><div class="skill-tags"><span class="tag">Logo Design</span><span class="tag">Brand Guidelines</span><span class="tag">Typography</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Print & Packaging</div><div class="skill-tags"><span class="tag">Poster Design</span><span class="tag">Flyers</span><span class="tag">Packaging</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Digital & Social</div><div class="skill-tags"><span class="tag">Social Media Design</span><span class="tag">YouTube Graphics</span><span class="tag">Web Graphics</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Other</div><div class="skill-tags"><span class="tag">Client Communication</span><span class="tag">Project Planning</span></div></div>
+</div>
+</div>
+</section>
+
+<section id="projects" class="section">
+<div class="container">
+<div class="sec-head"><span class="eyebrow">Projects</span><h2>What I've built</h2></div>
+<div role="list">
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Gadget World — Headphone Ad</h3>
+<p class="node-desc">A social media product ad for a wireless headphone brand, built around a blue gradient background and layered typography for a premium tech feel.</p>
+<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span><span class="tag">Typography</span></div>
+<img src="images/project-1.jpg" alt="Gadget World headphone ad design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Flyer / Promo Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Graphic Design Services Flyer</h3>
+<p class="node-desc">A promotional flyer listing design services — logo, brochure, flyer, social posts, letterhead, banner, and poster design — built to promote a freelance design offer.</p>
+<div class="node-tech"><span class="tag">Flyer Design</span><span class="tag">Branding</span></div>
+<img src="images/project-2.jpg" alt="Graphic design services flyer" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Best Sound — Headphone Ad</h3>
+<p class="node-desc">A high-contrast red and white product ad for premium headphones, using a diagonal split layout to keep full focus on the product.</p>
+<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span></div>
+<img src="images/project-3.jpg" alt="Best Sound headphone ad design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Course Ad Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Upskill Learning Center — Course Ad</h3>
+<p class="node-desc">An admission ad for a graphic design course, pairing a clean portrait with Illustrator and Photoshop icons to speak directly to future students.</p>
+<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Education Ad</span></div>
+<img src="images/project-4.jpg" alt="Upskill Learning Center course ad design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">YouTube Graphics</div></div>
+<div class="node-content">
+<h3 class="node-title">100K Subscribers — YouTube Banner</h3>
+<p class="node-desc">A celebratory YouTube milestone banner built around a fire background and bold type to match the energy of the moment.</p>
+<div class="node-tech"><span class="tag">YouTube Banner</span><span class="tag">Thumbnail Design</span></div>
+<img src="images/project-5.jpg" alt="100K subscribers YouTube banner design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">YouTube Thumbnail</div></div>
+<div class="node-content">
+<h3 class="node-title">How To Learn Graphic Design — YouTube Thumbnail</h3>
+<p class="node-desc">A YouTube thumbnail for a graphic design tutorial, combining a warm textured background with tool icons and bold stacked type to drive clicks.</p>
+<div class="node-tech"><span class="tag">YouTube Thumbnail</span><span class="tag">Typography</span></div>
+<img src="images/project-6.jpg" alt="How to learn graphic design YouTube thumbnail" class="project-img" />
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="contact" class="section">
+<div class="container">
+<div class="sec-head"><span class="eyebrow">Contact</span><h2>Let's work together</h2></div>
+<div class="contact-grid">
+<div>
+<form id="contact-form">
+<div class="form-group">
+<label class="form-label" for="name">Name</label>
+<input class="form-input" type="text" id="name" name="name" required placeholder="Your name" autocomplete="name"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="email">Email</label>
+<input class="form-input" type="email" id="email" name="email" required placeholder="your@email.com" autocomplete="email"/>
+</div>
+<div class="form-group">
+<label class="form-label" for="message">Message</label>
+<textarea class="form-input" id="message" name="message" required placeholder="Tell me about your project…"></textarea>
+</div>
+<button type="submit" class="form-submit">Send message →</button>
+<div id="form-status" class="form-status"></div>
+</form>
+</div>
+<div>
+<div class="contact-links">
+<div class="contact-link-item">
+<div class="contact-icon ci-email"><svg viewBox="0 0 24 24"><path d="M2 5.5C2 4.67 2.67 4 3.5 4h17c.83 0 1.5.67 1.5 1.5v13c0 .83-.67 1.5-1.5 1.5h-17C2.67 20 2 19.33 2 18.5v-13zm2.2.5 7.3 5.47a.8.8 0 0 0 .96 0L19.8 6H4.2zM4 8.1V18h16V8.1l-7.09 5.3a2.3 2.3 0 0 1-2.82 0L4 8.1z"/></svg></div>
+<div><div class="contact-link-label">Email</div><a href="mailto:shrifiabdulsatar89@gmail.com" class="contact-link-val">shrifiabdulsatar89@gmail.com</a></div>
+</div>
+<div class="contact-link-item">
+<div class="contact-icon ci-phone"><svg viewBox="0 0 24 24"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.28-.28.7-.38 1.06-.24.98.32 2.04.5 3.14.5.6 0 1.09.49 1.09 1.09V20c0 .6-.49 1.09-1.09 1.09C10.16 21.09 2.91 13.84 2.91 4.09 2.91 3.49 3.4 3 4 3h3.65c.6 0 1.09.49 1.09 1.09 0 1.1.18 2.16.5 3.14.14.36.04.78-.24 1.06L6.6 10.8z"/></svg></div>
+<div><div class="contact-link-label">Phone</div><a href="tel:+93792124976" class="contact-link-val">+93792124976</a></div>
+</div>
+<div class="contact-link-item">
+<div class="contact-icon ci-whatsapp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.24-.46-2.37-1.46-.87-.78-1.46-1.74-1.63-2.04-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35z"/><path d="M20.5 3.5A11.8 11.8 0 0 0 12.03 0C5.6 0 .38 5.2.38 11.6c0 2.05.54 4.05 1.56 5.82L.3 24l6.75-1.76a11.7 11.7 0 0 0 5.6 1.43h.01c6.43 0 11.65-5.2 11.65-11.6 0-3.1-1.22-6.01-3.4-8.19zM12.03 21.35h-.01a9.7 9.7 0 0 1-4.95-1.36l-.35-.21-3.7.97.99-3.6-.23-.37a9.6 9.6 0 0 1-1.48-5.18c0-5.34 4.37-9.68 9.75-9.68 2.6 0 5.05 1.01 6.89 2.85a9.6 9.6 0 0 1 2.85 6.85c0 5.34-4.37 9.73-9.76 9.73z"/></svg></div>
+<div><div class="contact-link-label">WhatsApp</div><a href="https://wa.me/93792124976" target="_blank" rel="noopener" class="contact-link-val">+93792124976</a></div>
+</div>
+<div class="contact-link-item">
+<div class="contact-icon ci-freelancer"><img src="images/freelancer-logo.png" alt="Freelancer" /></div>
+<div><div class="contact-link-label">Freelancer</div><a href="https://www.freelancer.com/u/abdulsatars2" target="_blank" rel="noopener" class="contact-link-val">Hire on Freelancer</a></div>
+</div>
+<div class="contact-link-item">
+<div class="contact-icon ci-fiverr"><svg viewBox="0 0 100 100"><path fill="#fff" d="M43 30c0-7 5-11 12-11 3 0 5 .4 7 1v10c-1.5-.6-3-1-4.5-1-3 0-4.5 1.5-4.5 4.5V38h9v10h-9v30H43V48h-6V38h6v-8z"/><rect x="64" y="38" width="10" height="40" fill="#fff"/><circle cx="69" cy="27" r="6" fill="#fff"/></svg></div>
+<div><div class="contact-link-label">Fiverr</div><a href="https://www.fiverr.com/s/99mzP8E" target="_blank" rel="noopener" class="contact-link-val">Hire on Fiverr</a></div>
+</div>
+<div class="contact-link-item">
+<div class="contact-icon ci-linkedin"><svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></div>
+<div><div class="contact-link-label">LinkedIn</div><a href="https://www.linkedin.com/in/abdul-satar-sharifi-76489741a" target="_blank" rel="noopener" class="contact-link-val">Abdul Satar Sharifi</a></div>
+</div>
+</div>
+<p style="margin-top:20px;font-size:13px;color:var(--txt2);font-family:'JetBrains Mono',monospace;line-height:1.6">Typically respond within 24 hours. Available for contract work, one-off projects, and ongoing collaborations.</p>
+</div>
+</div>
+</div>
+</section>
+
+<footer>
+<div class="container footer-inner">
+<span class="footer-name">Abdul Satar Sharifi — Graphic Designer</span>
+<span style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--txt2)">© 2026</span>
+</div>
+</footer>
+
+<script>
+(function(){
+const lines=[
+{t:'cmd',text:'$ whoami'},
+{t:'out',text:'> Abdul Satar Sharifi'},
+{t:'gap'},
+{t:'cmd',text:'$ role --list'},
+{t:'out',text:'> Graphic Designer'},
+{t:'out',text:'> Brand & Social Media Designer'},
+{t:'gap'},
+{t:'cmd',text:'$ skills --top'},
+{t:'out',text:'> Photoshop · Illustrator · Figma'},
+];
+const body=document.getElementById('terminal-body');
+const pref=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let li=0;
+function mkLine(type,text){
+const d=document.createElement('div');
+if(type==='gap'){d.style.height='4px';return d}
+d.style.fontFamily="'JetBrains Mono',monospace";
+d.style.fontSize='13px';
+d.style.lineHeight='1.7';
+d.style.color=type==='cmd'?'#8B93A1':'#E8E6E1';
+if(text)d.textContent=text;
+return d;
+}
+if(pref){
+lines.forEach(l=>body.appendChild(mkLine(l.t,l.text)));
+const cur=document.createElement('span');cur.className='cursor';body.appendChild(cur);
+return;
+}
+function nextLine(){
+if(li>=lines.length){
+const cur=document.createElement('span');cur.className='cursor';body.appendChild(cur);
+return;
+}
+const l=lines[li++];
+if(l.t==='gap'){body.appendChild(mkLine('gap'));setTimeout(nextLine,60);return}
+const d=mkLine(l.t,'');body.appendChild(d);
+let chars=[...l.text],idx=0;
+function typeChar(){
+if(idx<chars.length){d.textContent+=chars[idx++];setTimeout(typeChar,l.t==='cmd'?40:22)}
+else{setTimeout(nextLine,l.t==='cmd'?80:40)}
+}
+typeChar();
+}
+setTimeout(nextLine,400);
+const hamburgerBtn = document.getElementById('hamburger-btn');
+const navMobile = document.getElementById('nav-mobile');
+const navLinks = navMobile.querySelectorAll('a');
+hamburgerBtn.addEventListener('click', () => {
+  hamburgerBtn.classList.toggle('active');
+  navMobile.classList.toggle('active');
+});
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    hamburgerBtn.classList.remove('active');
+    navMobile.classList.remove('active');
+  });
+});
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const st = document.getElementById('form-status');
+  const btn = this.querySelector('.form-submit');
+
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+
+  try {
+    const res = await fetch('https://formspree.io/f/mvznegvy', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(this)
+    });
+
+    if (res.ok) {
+      st.className = 'form-status status-ok';
+      st.textContent = 'Message sent — I\'ll get back to you within 24 hours.';
+      this.reset();
+    } else {
+      st.className = 'form-status status-err';
+      st.textContent = 'Something went wrong. Email me directly at shrifiabdulsatar89@gmail.com';
+    }
+  } catch (err) {
+    st.className = 'form-status status-err';
+    st.textContent = 'Something went wrong. Email me directly at shrifiabdulsatar89@gmail.com';
+  }
+  btn.textContent = 'Send message →';
+  btn.disabled = false;
+});
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none'}})
+},{threshold:.1});
+document.querySelectorAll('.node-row,.skill-group').forEach(el=>{
+el.style.opacity='0';el.style.transform='translateY(14px)';
+el.style.transition='opacity .45s ease, transform .45s ease';
+obs.observe(el);
+});
+document.querySelectorAll('.node-row').forEach(r=>{
+r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')r.click()})
+});
+})();
+</script>
+</body>
+</html>
