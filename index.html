@@ -129,7 +129,10 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 .sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--txt)}
 @media(max-width:768px){
 .hero-grid{grid-template-columns:1fr;gap:40px}
-.profile-placeholder{display:none}
+.hero-grid > div:first-child{order:2}
+.hero-grid > div:last-child{order:1;display:flex;justify-content:center}
+.profile-placeholder{width:160px;height:160px;margin:0 auto;border-radius:50%}
+.profile-placeholder img{border-radius:50%}
 .about-grid,.contact-grid{grid-template-columns:1fr}
 .terminal-box{min-width:unset}
 .node-row{grid-template-columns:1fr;gap:8px}
