@@ -125,6 +125,11 @@ textarea.form-input{resize:vertical;min-height:120px}
 footer{padding:32px 0;border-top:1px solid var(--border)}
 .footer-inner{display:flex;justify-content:space-between;align-items:center}
 .footer-name{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--txt2)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
+.why-card{background:var(--card);padding:28px}
+.why-num{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--accent);margin-bottom:10px}
+.why-title{font-family:'JetBrains Mono',monospace;font-size:16px;font-weight:700;color:var(--txt);margin-bottom:8px}
+.why-desc{font-size:14px;color:var(--txt2);line-height:1.55}
 .sec-head{margin-bottom:56px}
 .sec-head .eyebrow{margin-bottom:12px;display:block}
 .sec-head h2{font-size:clamp(28px,4vw,44px);font-weight:700;color:var(--txt)}
@@ -164,6 +169,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#motion">Motion</a>
+<a href="#why">Why Me</a>
 <a href="#contact">Contact</a>
 </div>
 <div class="nav-links-mobile" id="nav-mobile">
@@ -171,6 +177,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
 <a href="#motion">Motion</a>
+<a href="#why">Why Me</a>
 <a href="#contact">Contact</a>
 </div>
 </div>
@@ -215,7 +222,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <p>I'm available for freelance work: poster and ad design, social media content, YouTube graphics, and brand identity for small businesses and creators.</p>
 </div>
 <div class="stats-col">
-<div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Projects designed</div></div>
+<div class="stat-item"><div class="stat-num">11+</div><div class="stat-label">Projects designed</div></div>
 <div class="stat-item"><div class="stat-num">Adobe<br/>Photoshop</div><div class="stat-label">Main tools</div></div>
 <div class="stat-item"><div class="stat-num" style="color:var(--success)">Open</div><div class="stat-label">Available for freelance</div></div>
 </div>
@@ -258,26 +265,6 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <p class="node-desc">A social media product ad for a wireless headphone brand, built around a blue gradient background and layered typography for a premium tech feel.</p>
 <div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span><span class="tag">Typography</span></div>
 <img src="images/project-1.jpg" alt="Gadget World headphone ad design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
-<div class="node-content">
-<h3 class="node-title">New Arrival — Headphone Ad</h3>
-<p class="node-desc">A promotional social media ad announcing a headphone discount offer, using a bold red backdrop and clear call-to-action to drive orders.</p>
-<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span></div>
-<img src="images/project-8.png" alt="New arrival headphone ad design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Best Sound — Headphone Ad</h3>
-<p class="node-desc">A high-contrast red and white product ad for premium headphones, using a diagonal split layout to keep full focus on the product.</p>
-<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span></div>
-<img src="images/project-3.jpg" alt="Best Sound headphone ad design" class="project-img" />
 </div>
 </div>
 
@@ -332,12 +319,42 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 </div>
 
 <div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">YouTube Thumbnail</div></div>
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Web Banner Design</div></div>
 <div class="node-content">
-<h3 class="node-title">How To Learn Graphic Design — YouTube Thumbnail</h3>
-<p class="node-desc">A YouTube thumbnail for a graphic design tutorial, combining a warm textured background with tool icons and bold stacked type to drive clicks.</p>
-<div class="node-tech"><span class="tag">YouTube Thumbnail</span><span class="tag">Typography</span></div>
-<img src="images/project-6.jpg" alt="How to learn graphic design YouTube thumbnail" class="project-img" />
+<h3 class="node-title">Modern Home For Sale — Real Estate Banner</h3>
+<p class="node-desc">A real estate web banner pairing a warm dusk property photo with bold layered typography and a clear "Book Now" call-to-action to drive listing inquiries.</p>
+<div class="node-tech"><span class="tag">Web Banner</span><span class="tag">Real Estate</span><span class="tag">Typography</span></div>
+<img src="images/project-11.png" alt="Modern Home For Sale real estate web banner design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Business Card Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Abdul Satar Sharifi — Personal Business Card</h3>
+<p class="node-desc">A black-and-gold double-sided business card for my own design practice, featuring a custom monogram, a personal tagline, and icons for branding, graphic design, video editing, and mobile app UI/UX.</p>
+<div class="node-tech"><span class="tag">Business Card</span><span class="tag">Branding</span><span class="tag">Print Design</span></div>
+<img src="images/project-14.png" alt="Abdul Satar Sharifi personal business card design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">UI/UX Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Login Page — Mobile App UI</h3>
+<p class="node-desc">A mobile app login screen concept with a warm sunset backdrop and frosted glass-style input fields, designed to keep the focus on a clean, minimal sign-in flow.</p>
+<div class="node-tech"><span class="tag">UI/UX Design</span><span class="tag">Mobile App</span></div>
+<img src="images/project-15.png" alt="Login page mobile app UI design" class="project-img" />
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Brochure Design</div></div>
+<div class="node-content">
+<h3 class="node-title">Business Brochure — Tri-Fold</h3>
+<p class="node-desc">A red-and-grey tri-fold business brochure with a services list, "Why Work With Us" panel, and company overview, built around a bold diagonal ribbon motif.</p>
+<div class="node-tech"><span class="tag">Brochure</span><span class="tag">Print Design</span><span class="tag">Branding</span></div>
+<img src="images/project-13.png" alt="Tri-fold business brochure design" class="project-img" />
 </div>
 </div>
 
@@ -360,6 +377,54 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 </div>
 </div>
 
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Motion Graphic</div></div>
+<div class="node-content">
+<h3 class="node-title">MOTION — Logo Reveal Animation</h3>
+<p class="node-desc">A minimal black-and-white logo reveal built in After Effects, animating each letter into place with a mirrored reflection for a clean, confident brand intro.</p>
+<div class="node-tech"><span class="tag">After Effects</span><span class="tag">Logo Animation</span></div>
+<video class="project-img" src="videos/motion-graphic-02.mp4" autoplay muted loop playsinline controls></video>
+</div>
+</div>
+
+<div class="node-row" role="listitem" tabindex="0">
+<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Video Editing</div></div>
+<div class="node-content">
+<h3 class="node-title">Branding Secret — Vertical Reel Edit</h3>
+<p class="node-desc">A vertical, reels-style edit combining dramatic footage with animated text reveals and bold accent graphics, built for short-form social media content.</p>
+<div class="node-tech"><span class="tag">Premiere Pro</span><span class="tag">Video Editing</span><span class="tag">Social Media</span></div>
+<video class="project-img" src="videos/motion-graphic-03.mp4" autoplay muted loop playsinline controls></video>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<section id="why" class="section">
+<div class="container">
+<div class="sec-head"><span class="eyebrow">Why Choose Me</span><h2>What you get</h2></div>
+<div class="why-grid">
+<div class="why-card">
+<div class="why-num">01</div>
+<div class="why-title">Multi-Skill Creative</div>
+<div class="why-desc">Branding, print, social media, motion graphics, and video editing — all under one roof, so you don't need to hire separate freelancers for one project.</div>
+</div>
+<div class="why-card">
+<div class="why-num">02</div>
+<div class="why-title">Fast, Reliable Turnaround</div>
+<div class="why-desc">Clear timelines from the first message to final files, with steady communication throughout so you always know where your project stands.</div>
+</div>
+<div class="why-card">
+<div class="why-num">03</div>
+<div class="why-title">Original Concepts, Not Templates</div>
+<div class="why-desc">Every design starts from what your brand needs to say, not a recycled layout — built to look like you, not like everyone else.</div>
+</div>
+<div class="why-card">
+<div class="why-num">04</div>
+<div class="why-title">Direct, Easy Communication</div>
+<div class="why-desc">Reach me directly by WhatsApp, email, or call — no agency layers or account managers in between, just straightforward collaboration.</div>
+</div>
 </div>
 </div>
 </section>
@@ -519,7 +584,7 @@ document.getElementById('contact-form').addEventListener('submit', async functio
 const obs=new IntersectionObserver(entries=>{
 entries.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='none'}})
 },{threshold:.1});
-document.querySelectorAll('.node-row,.skill-group').forEach(el=>{
+document.querySelectorAll('.node-row,.skill-group,.why-card').forEach(el=>{
 el.style.opacity='0';el.style.transform='translateY(14px)';
 el.style.transition='opacity .45s ease, transform .45s ease';
 obs.observe(el);
