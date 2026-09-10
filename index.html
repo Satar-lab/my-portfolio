@@ -90,6 +90,29 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,14,20,0.92);backdrop-fi
 .node-tech{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
 .node-link{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--accent);display:inline-flex;align-items:center;gap:4px}
 .node-link:hover{text-decoration:underline}
+.projects-scroll{position:relative;margin:0 -24px;padding:0 24px}
+.projects-scroll::before,.projects-scroll::after{content:'';position:absolute;top:0;bottom:20px;width:64px;z-index:2;pointer-events:none}
+.projects-scroll::before{left:0;background:linear-gradient(90deg,var(--bg),rgba(10,14,20,0))}
+.projects-scroll::after{right:0;background:linear-gradient(270deg,var(--bg),rgba(10,14,20,0))}
+.project-track{display:flex;gap:22px;overflow-x:auto;overscroll-behavior-x:contain;scroll-behavior:auto;padding:4px 4px 22px;cursor:grab;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--border) transparent}
+.project-track:active{cursor:grabbing}
+.project-track::-webkit-scrollbar{height:6px}
+.project-track::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px}
+.project-track::-webkit-scrollbar-track{background:transparent}
+.project-card{flex:0 0 300px;background:var(--card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:border-color .2s}
+.project-card:hover{border-color:var(--accent-dim)}
+.project-card:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.project-card-img-wrap{aspect-ratio:4/3;overflow:hidden;background:var(--bg)}
+.project-card-img-wrap img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;-webkit-user-drag:none}
+.project-card-body{padding:18px 20px 22px;display:flex;flex-direction:column;gap:9px;flex:1}
+.project-card-badge{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent-dim);letter-spacing:.04em}
+.project-card-title{font-family:'JetBrains Mono',monospace;font-size:15px;font-weight:700;color:var(--txt);line-height:1.35}
+.project-card-desc{font-size:13.5px;color:var(--txt2);line-height:1.55}
+.project-card-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px}
+@media(max-width:768px){
+.projects-scroll{margin:0 -20px;padding:0 20px}
+.project-card{flex-basis:250px}
+}
 .status-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:2px}
 .status-live{color:var(--success);border:1px solid rgba(74,222,128,.25);background:rgba(74,222,128,.06)}
 .status-progress{color:var(--accent);border:1px solid rgba(212,162,76,.25);background:rgba(212,162,76,.06)}
@@ -168,7 +191,6 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#motion">Motion</a>
 <a href="#why">Why Me</a>
 <a href="#contact">Contact</a>
 </div>
@@ -176,7 +198,6 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#motion">Motion</a>
 <a href="#why">Why Me</a>
 <a href="#contact">Contact</a>
 </div>
@@ -246,157 +267,80 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <section id="projects" class="section">
 <div class="container">
 <div class="sec-head"><span class="eyebrow">Projects</span><h2>What I've built</h2></div>
-<div role="list">
+<div class="projects-scroll">
+<div class="project-track" id="project-track" role="list" aria-label="Project showcase, scroll horizontally to see more" tabindex="0">
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Book Cover Design</div></div>
-<div class="node-content">
-<h3 class="node-title">The Blind Justice — Book Cover</h3>
-<p class="node-desc">A full wraparound novel cover — front, spine, and back — combining a dramatic blindfolded portrait with a deep crimson palette to set the tone for a courtroom thriller.</p>
-<div class="node-tech"><span class="tag">Book Cover</span><span class="tag">Print Design</span><span class="tag">Typography</span></div>
-<img src="images/project-7.png" alt="The Blind Justice book cover design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Gadget World — Headphone Ad</h3>
-<p class="node-desc">A social media product ad for a wireless headphone brand, built around a blue gradient background and layered typography for a premium tech feel.</p>
-<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span><span class="tag">Typography</span></div>
-<img src="images/project-1.jpg" alt="Gadget World headphone ad design" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-sharifi-letterhead.png" alt="Sharifi Graphic letterhead design" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Letterhead Design</span>
+<h3 class="project-card-title">Sharifi Graphic — Letterhead</h3>
+<p class="project-card-desc">A personal-brand letterhead built around a navy-and-orange geometric header and a folded-corner accent at the base, keeping the contact details clean and easy to scan.</p>
+<div class="project-card-tags"><span class="tag">Letterhead</span><span class="tag">Branding</span><span class="tag">Print Design</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Product Ad Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Fresh Style — Sprite Product Ad</h3>
-<p class="node-desc">A vibrant beverage ad built around a chilled Sprite can, layered citrus elements, and bold oversized type to create an eye-catching social media post.</p>
-<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Product Ad</span></div>
-<img src="images/project-9.png" alt="Sprite fresh style product ad design" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-maatru-masale-packaging.png" alt="Maatru Masale organic garam masala doypack packaging design" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Packaging Design</span>
+<h3 class="project-card-title">Maatru Masale — Doypack Packaging</h3>
+<p class="project-card-desc">A standee pouch design for an organic garam masala brand, pairing a warm illustrated spice-seller mascot and hand-drawn leaf accents with a gold gradient base for a traditional, trustworthy feel.</p>
+<div class="project-card-tags"><span class="tag">Packaging</span><span class="tag">Illustration</span><span class="tag">Branding</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Flyer / Promo Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Graphic Design Services Flyer</h3>
-<p class="node-desc">A promotional flyer listing design services — logo, brochure, flyer, social posts, letterhead, banner, and poster design — built to promote a freelance design offer.</p>
-<div class="node-tech"><span class="tag">Flyer Design</span><span class="tag">Branding</span></div>
-<img src="images/project-2.jpg" alt="Graphic design services flyer" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-alovera-facewash-tube.png" alt="Alovera Facewash tube packaging design" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Packaging Design</span>
+<h3 class="project-card-title">Alovera Facewash — Tube Packaging</h3>
+<p class="project-card-desc">A minimal tube design for an aloe vera facewash, using a clean green-and-white palette and simple iconography so the product reads as gentle and natural on shelf.</p>
+<div class="project-card-tags"><span class="tag">Packaging</span><span class="tag">Product Design</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Course Ad Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Upskill Learning Center — Course Ad</h3>
-<p class="node-desc">An admission ad for a graphic design course, pairing a clean portrait with Illustrator and Photoshop icons to speak directly to future students.</p>
-<div class="node-tech"><span class="tag">Social Media</span><span class="tag">Education Ad</span></div>
-<img src="images/project-4.jpg" alt="Upskill Learning Center course ad design" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-blind-justice-cover.png" alt="The Blind Justice book cover design" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Book Cover Design</span>
+<h3 class="project-card-title">The Blind Justice — Book Cover</h3>
+<p class="project-card-desc">A full wraparound novel cover — front, spine, and back — combining a dramatic blindfolded portrait with a deep crimson palette to set the tone for a courtroom thriller.</p>
+<div class="project-card-tags"><span class="tag">Book Cover</span><span class="tag">Print Design</span><span class="tag">Typography</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">YouTube Thumbnail</div></div>
-<div class="node-content">
-<h3 class="node-title">Looking For A Photoshop Tutorial — YouTube Thumbnail</h3>
-<p class="node-desc">A YouTube thumbnail for a Photoshop tutorial video, mixing a warm painted background, bold stacked type, and a cut-out subject portrait to drive clicks.</p>
-<div class="node-tech"><span class="tag">YouTube Thumbnail</span><span class="tag">Typography</span></div>
-<img src="images/project-10.png" alt="Looking for a Photoshop tutorial YouTube thumbnail" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-burger-billboard-concept.png" alt="Best Burger In Town billboard design concept" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Billboard Design · Concept</span>
+<h3 class="project-card-title">Best Burger In Town — Billboard Concept</h3>
+<p class="project-card-desc">A practice billboard layout pairing a bold burger shot with a soft-drink tie-in, exploring large-format ad hierarchy and high-contrast color for roadside visibility.</p>
+<div class="project-card-tags"><span class="tag">Billboard</span><span class="tag">Advertising</span><span class="tag">Concept</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">YouTube Graphics</div></div>
-<div class="node-content">
-<h3 class="node-title">100K Subscribers — YouTube Banner</h3>
-<p class="node-desc">A celebratory YouTube milestone banner built around a fire background and bold type to match the energy of the moment.</p>
-<div class="node-tech"><span class="tag">YouTube Banner</span><span class="tag">Thumbnail Design</span></div>
-<img src="images/project-5.jpg" alt="100K subscribers YouTube banner design" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-business-rollup-concept.png" alt="Online Business Intelligence roll-up banner design concept" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Roll-Up Banner · Concept</span>
+<h3 class="project-card-title">Online Business Intelligence — Roll-Up Banner</h3>
+<p class="project-card-desc">A practice trade-show roll-up concept laying out a hero photo, an awards badge, and a three-icon services row for a business consulting brand.</p>
+<div class="project-card-tags"><span class="tag">Banner Design</span><span class="tag">Layout</span><span class="tag">Concept</span></div>
 </div>
 </div>
 
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Web Banner Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Modern Home For Sale — Real Estate Banner</h3>
-<p class="node-desc">A real estate web banner pairing a warm dusk property photo with bold layered typography and a clear "Book Now" call-to-action to drive listing inquiries.</p>
-<div class="node-tech"><span class="tag">Web Banner</span><span class="tag">Real Estate</span><span class="tag">Typography</span></div>
-<img src="images/project-11.png" alt="Modern Home For Sale real estate web banner design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Business Card Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Abdul Satar Sharifi — Personal Business Card</h3>
-<p class="node-desc">A black-and-gold double-sided business card for my own design practice, featuring a custom monogram, a personal tagline, and icons for branding, graphic design, video editing, and mobile app UI/UX.</p>
-<div class="node-tech"><span class="tag">Business Card</span><span class="tag">Branding</span><span class="tag">Print Design</span></div>
-<img src="images/project-14.png" alt="Abdul Satar Sharifi personal business card design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">UI/UX Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Login Page — Mobile App UI</h3>
-<p class="node-desc">A mobile app login screen concept with a warm sunset backdrop and frosted glass-style input fields, designed to keep the focus on a clean, minimal sign-in flow.</p>
-<div class="node-tech"><span class="tag">UI/UX Design</span><span class="tag">Mobile App</span></div>
-<img src="images/project-15.png" alt="Login page mobile app UI design" class="project-img" />
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Brochure Design</div></div>
-<div class="node-content">
-<h3 class="node-title">Business Brochure — Tri-Fold</h3>
-<p class="node-desc">A red-and-grey tri-fold business brochure with a services list, "Why Work With Us" panel, and company overview, built around a bold diagonal ribbon motif.</p>
-<div class="node-tech"><span class="tag">Brochure</span><span class="tag">Print Design</span><span class="tag">Branding</span></div>
-<img src="images/project-13.png" alt="Tri-fold business brochure design" class="project-img" />
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/project-business-brochure-concept.png" alt="Creative Brand tri-fold business brochure design concept" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Brochure Design · Concept</span>
+<h3 class="project-card-title">Creative Brand — Business Brochure Concept</h3>
+<p class="project-card-desc">A tri-fold brochure concept exploring a bold red-and-white geometric system across the cover, services, and about panels for a creative agency template.</p>
+<div class="project-card-tags"><span class="tag">Brochure</span><span class="tag">Print Design</span><span class="tag">Concept</span></div>
 </div>
 </div>
 
 </div>
-</div>
-</section>
-
-<section id="motion" class="section">
-<div class="container">
-<div class="sec-head"><span class="eyebrow">Motion Graphics</span><h2>Animation work</h2></div>
-<div role="list">
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Motion Graphic</div></div>
-<div class="node-content">
-<h3 class="node-title">Motion Graphic — Text Animation</h3>
-<p class="node-desc">A short motion graphic built in After Effects, exploring keyframe-based movement and typography reveal.</p>
-<div class="node-tech"><span class="tag">After Effects</span><span class="tag">Motion Design</span></div>
-<video class="project-img" src="videos/motion-graphic-01.mp4" autoplay muted loop playsinline controls></video>
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Motion Graphic</div></div>
-<div class="node-content">
-<h3 class="node-title">MOTION — Logo Reveal Animation</h3>
-<p class="node-desc">A minimal black-and-white logo reveal built in After Effects, animating each letter into place with a mirrored reflection for a clean, confident brand intro.</p>
-<div class="node-tech"><span class="tag">After Effects</span><span class="tag">Logo Animation</span></div>
-<video class="project-img" src="videos/motion-graphic-02.mp4" autoplay muted loop playsinline controls></video>
-</div>
-</div>
-
-<div class="node-row" role="listitem" tabindex="0">
-<div class="node-left"><div class="node-dot"></div><div class="node-role-badge">Video Editing</div></div>
-<div class="node-content">
-<h3 class="node-title">Branding Secret — Vertical Reel Edit</h3>
-<p class="node-desc">A vertical, reels-style edit combining dramatic footage with animated text reveals and bold accent graphics, built for short-form social media content.</p>
-<div class="node-tech"><span class="tag">Premiere Pro</span><span class="tag">Video Editing</span><span class="tag">Social Media</span></div>
-<video class="project-img" src="videos/motion-graphic-03.mp4" autoplay muted loop playsinline controls></video>
-</div>
-</div>
-
 </div>
 </div>
 </section>
@@ -592,6 +536,59 @@ obs.observe(el);
 document.querySelectorAll('.node-row').forEach(r=>{
 r.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' ')r.click()})
 });
+
+// Projects: slow back-and-forth auto-scroll, pausable by manual scroll/drag/touch
+// No duplicated cards — the track just drifts to the end, then drifts back.
+(function(){
+const track=document.getElementById('project-track');
+if(!track)return;
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+let paused=reduceMotion;
+let resumeTimer=null;
+let direction=1; // 1 = forward, -1 = backward
+const SPEED=0.35; // px per frame — deliberately slow
+
+function pause(){
+paused=true;
+if(resumeTimer)clearTimeout(resumeTimer);
+}
+function scheduleResume(delay){
+if(reduceMotion)return;
+if(resumeTimer)clearTimeout(resumeTimer);
+resumeTimer=setTimeout(()=>{paused=false},delay);
+}
+
+track.addEventListener('mouseenter',pause);
+track.addEventListener('mouseleave',()=>scheduleResume(400));
+track.addEventListener('focusin',pause);
+track.addEventListener('focusout',()=>scheduleResume(400));
+track.addEventListener('touchstart',pause,{passive:true});
+track.addEventListener('touchend',()=>scheduleResume(2000));
+track.addEventListener('pointerdown',pause);
+window.addEventListener('pointerup',()=>{
+if(track.matches(':hover'))scheduleResume(800);else scheduleResume(0);
+});
+track.addEventListener('wheel',()=>{pause();scheduleResume(1800)},{passive:true});
+
+function step(){
+if(!paused){
+const maxScroll=track.scrollWidth-track.clientWidth;
+if(maxScroll>0){
+track.scrollLeft+=SPEED*direction;
+if(track.scrollLeft>=maxScroll){
+track.scrollLeft=maxScroll;
+direction=-1;
+}else if(track.scrollLeft<=0){
+track.scrollLeft=0;
+direction=1;
+}
+}
+}
+requestAnimationFrame(step);
+}
+requestAnimationFrame(step);
+})();
 })();
 </script>
 </body>
