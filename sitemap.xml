@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://satarsharifi.vercel.app/</loc>
+    <lastmod>2026-10-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/profile.png</image:loc>
+      <image:title>Abdul Satar Sharifi</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-sharifi-letterhead.png</image:loc>
+      <image:title>Sharifi Graphic letterhead design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-maatru-masale-packaging.png</image:loc>
+      <image:title>Maatru Masale organic garam masala doypack packaging design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-alovera-facewash-tube.png</image:loc>
+      <image:title>Alovera Facewash tube packaging design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-blind-justice-cover.png</image:loc>
+      <image:title>The Blind Justice book cover design</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-burger-billboard-concept.png</image:loc>
+      <image:title>Best Burger In Town billboard design concept</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-business-rollup-concept.png</image:loc>
+      <image:title>Online Business Intelligence roll-up banner design concept</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://satarsharifi.vercel.app/images/project-business-brochure-concept.png</image:loc>
+      <image:title>Creative Brand tri-fold business brochure design concept</image:title>
+    </image:image>
+  </url>
+</urlset>
