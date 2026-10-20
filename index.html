@@ -153,6 +153,8 @@ nav{position:sticky;top:0;z-index:100;background:rgba(10,14,20,0.92);backdrop-fi
 .projects-scroll{margin:0 -20px;padding:0 20px}
 .project-card{flex-basis:250px}
 }
+.sec-head-row{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+.projects-more{display:flex;justify-content:center;margin-top:36px}
 .status-badge{display:inline-flex;align-items:center;gap:5px;font-size:11px;font-family:'JetBrains Mono',monospace;padding:3px 8px;border-radius:2px}
 .status-live{color:var(--success);border:1px solid rgba(74,222,128,.25);background:rgba(74,222,128,.06)}
 .status-progress{color:var(--accent);border:1px solid rgba(212,162,76,.25);background:rgba(212,162,76,.06)}
@@ -284,7 +286,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 </div>
 <div class="stats-col">
 <div class="stat-item"><div class="stat-num">11+</div><div class="stat-label">Projects designed</div></div>
-<div class="stat-item"><div class="stat-num">Adobe<br/>Photoshop</div><div class="stat-label">Main tools</div></div>
+<div class="stat-item"><div class="stat-num">Photoshop<br/>Illustrator</div><div class="stat-label">Main tools</div></div>
 <div class="stat-item"><div class="stat-num" style="color:var(--success)">Open</div><div class="stat-label">Available for freelance</div></div>
 </div>
 </div>
@@ -295,7 +297,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <div class="container">
 <div class="sec-head"><span class="eyebrow">Skills</span><h2>What I work with</h2></div>
 <div class="skills-grid">
-<div class="skill-group"><div class="skill-group-title">Design Software</div><div class="skill-tags"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">InDesign</span><span class="tag">Premiere Pro</span><span class="tag">Canva</span></div></div>
+<div class="skill-group"><div class="skill-group-title">Design Software</div><div class="skill-tags"><span class="tag">Photoshop</span><span class="tag">Illustrator</span><span class="tag">InDesign</span><span class="tag">Canva</span></div></div>
 <div class="skill-group"><div class="skill-group-title">Brand & Identity</div><div class="skill-tags"><span class="tag">Logo Design</span><span class="tag">Brand Guidelines</span><span class="tag">Typography</span></div></div>
 <div class="skill-group"><div class="skill-group-title">Print & Packaging</div><div class="skill-tags"><span class="tag">Poster Design</span><span class="tag">Flyers</span><span class="tag">Packaging</span></div></div>
 <div class="skill-group"><div class="skill-group-title">Digital & Social</div><div class="skill-tags"><span class="tag">Social Media Design</span><span class="tag">YouTube Graphics</span><span class="tag">Web Graphics</span></div></div>
@@ -306,9 +308,20 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 
 <section id="projects" class="section">
 <div class="container">
-<div class="sec-head"><span class="eyebrow">Projects</span><h2>What I've built</h2></div>
+<div class="sec-head sec-head-row"><div><span class="eyebrow">Projects</span><h2>What I've built</h2></div><a href="projects.html" class="btn btn-outline">View all projects →</a></div>
 <div class="projects-scroll">
 <div class="project-track" id="project-track" role="list" aria-label="Project showcase, scroll horizontally to see more" tabindex="0">
+
+<div class="project-card" role="listitem" tabindex="0">
+<div class="project-card-img-wrap"><img src="images/golwer-billboard.jpg" alt="Golwer luxury scents billboard design in a street mockup" loading="lazy" draggable="false"/></div>
+<div class="project-card-body">
+<span class="project-card-badge">Brand Identity · 9 pieces</span>
+<h3 class="project-card-title">Golwer — Brand Identity Set</h3>
+<p class="project-card-desc">A full brand set for a fashion, beauty and lifestyle label: logo, business card, flyers, brochure, billboard, roll-up banner and calendar.</p>
+<div class="project-card-tags"><span class="tag">Logo</span><span class="tag">Print</span><span class="tag">Advertising</span></div>
+<a class="node-link" href="projects.html#golwer">See the full set →</a>
+</div>
+</div>
 
 <div class="project-card" role="listitem" tabindex="0">
 <div class="project-card-img-wrap"><img src="images/project-sharifi-letterhead.png" alt="Sharifi Graphic letterhead design" loading="lazy" draggable="false"/></div>
@@ -351,37 +364,19 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 </div>
 
 <div class="project-card" role="listitem" tabindex="0">
-<div class="project-card-img-wrap"><img src="images/project-burger-billboard-concept.png" alt="Best Burger In Town billboard design concept" loading="lazy" draggable="false"/></div>
+<div class="project-card-img-wrap"><img src="images/poster-origin-juice.jpg" alt="Origin Juice lemon drink social media ad" loading="lazy" draggable="false"/></div>
 <div class="project-card-body">
-<span class="project-card-badge">Billboard Design · Concept</span>
-<h3 class="project-card-title">Best Burger In Town — Billboard Concept</h3>
-<p class="project-card-desc">A practice billboard layout pairing a bold burger shot with a soft-drink tie-in, exploring large-format ad hierarchy and high-contrast color for roadside visibility.</p>
-<div class="project-card-tags"><span class="tag">Billboard</span><span class="tag">Advertising</span><span class="tag">Concept</span></div>
+<span class="project-card-badge">Social Media Ad</span>
+<h3 class="project-card-title">Origin Juice — Lemon Drink Ad</h3>
+<p class="project-card-desc">A product ad with water splash, citrus slices and mint around the can, on a layered green background with an order button.</p>
+<div class="project-card-tags"><span class="tag">Social Media</span><span class="tag">Product Ad</span><span class="tag">Retouching</span></div>
 </div>
 </div>
 
-<div class="project-card" role="listitem" tabindex="0">
-<div class="project-card-img-wrap"><img src="images/project-business-rollup-concept.png" alt="Online Business Intelligence roll-up banner design concept" loading="lazy" draggable="false"/></div>
-<div class="project-card-body">
-<span class="project-card-badge">Roll-Up Banner · Concept</span>
-<h3 class="project-card-title">Online Business Intelligence — Roll-Up Banner</h3>
-<p class="project-card-desc">A practice trade-show roll-up concept laying out a hero photo, an awards badge, and a three-icon services row for a business consulting brand.</p>
-<div class="project-card-tags"><span class="tag">Banner Design</span><span class="tag">Layout</span><span class="tag">Concept</span></div>
-</div>
-</div>
-
-<div class="project-card" role="listitem" tabindex="0">
-<div class="project-card-img-wrap"><img src="images/project-business-brochure-concept.png" alt="Creative Brand tri-fold business brochure design concept" loading="lazy" draggable="false"/></div>
-<div class="project-card-body">
-<span class="project-card-badge">Brochure Design · Concept</span>
-<h3 class="project-card-title">Creative Brand — Business Brochure Concept</h3>
-<p class="project-card-desc">A tri-fold brochure concept exploring a bold red-and-white geometric system across the cover, services, and about panels for a creative agency template.</p>
-<div class="project-card-tags"><span class="tag">Brochure</span><span class="tag">Print Design</span><span class="tag">Concept</span></div>
-</div>
-</div>
 
 </div>
 </div>
+<div class="projects-more"><a href="projects.html" class="btn btn-primary">View all projects →</a></div>
 </div>
 </section>
 
@@ -392,7 +387,7 @@ footer{padding:32px 0;border-top:1px solid var(--border)}
 <div class="why-card">
 <div class="why-num">01</div>
 <div class="why-title">Multi-Skill Creative</div>
-<div class="why-desc">Branding, print, social media, motion graphics, and video editing — all under one roof, so you don't need to hire separate freelancers for one project.</div>
+<div class="why-desc">Branding, print, social media, and motion graphics — all under one roof, so you don't need to hire separate freelancers for one project.</div>
 </div>
 <div class="why-card">
 <div class="why-num">02</div>
@@ -486,7 +481,7 @@ const lines=[
 {t:'out',text:'> Brand & Social Media Designer'},
 {t:'gap'},
 {t:'cmd',text:'$ skills --top'},
-{t:'out',text:'> Photoshop · Illustrator · Figma'},
+{t:'out',text:'> Photoshop · Illustrator'},
 ];
 const body=document.getElementById('terminal-body');
 const pref=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
